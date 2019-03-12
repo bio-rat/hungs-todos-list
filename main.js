@@ -2,6 +2,7 @@ const TODOS_KEY = "todos";
 
 let masterTodoList = [];
 
+localStorage.setItem("TODOS_KEY", JSON.stringify(masterTodoList));
 masterTodoList = JSON.parse(localStorage.getItem(TODOS_KEY));
 
 
