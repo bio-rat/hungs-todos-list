@@ -2,9 +2,10 @@ const TODOS_KEY = "todos";
 
 let masterTodoList = [];
 
-localStorage.setItem(TODOS_KEY, JSON.stringify(masterTodoList));
+if (JSON.parse(localStorage.getItem(TODOS_KEY)) != null) {
+  masterTodoList = JSON.parse(localStorage.getItem(TODOS_KEY));
+}
 
-masterTodoList = JSON.parse(localStorage.getItem(TODOS_KEY));
 
 let addTodo = () => {
   let inputField = document.querySelector("#add-item");
