@@ -1,12 +1,12 @@
 const TODOS_KEY = "todos";
 
 let masterTodoList = [
-  {"text" : "dunno man 1",
-  "isDone" : false},
-  {"text" : "dunno man 2",
-  "isDone" : false},
-  {"text" : "dunno man 3",
-  "isDone" : false}
+  {text : "dunno man 1",
+  isDone : false},
+  {text : "dunno man 2",
+  isDone : false},
+  {text : "dunno man 3",
+  isDone : false}
 ];
 
 masterTodoList = JSON.parse(localStorage.getItem(TODOS_KEY));
