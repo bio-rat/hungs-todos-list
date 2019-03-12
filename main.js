@@ -2,10 +2,10 @@ const TODOS_KEY = "todos";
 
 let masterTodoList = [];
 
+//this one fix bug when open in another computer
 if (JSON.parse(localStorage.getItem(TODOS_KEY)) != null) {
   masterTodoList = JSON.parse(localStorage.getItem(TODOS_KEY));
 }
-
 
 let addTodo = () => {
   let inputField = document.querySelector("#add-item");
@@ -14,14 +14,13 @@ let addTodo = () => {
   inputField.value = "";
 
   updateTodoList();
-
 }
 
 let updateTodoList = () => {
   let HTML = "";
   for (let i = 0; i < masterTodoList.length; i++) {
 
-    //if isDone and checkbox is checked
+    //if isDone = true and checkbox is checked
     if (masterTodoList[i].isDone && !showBtn.checked) {
       HTML += `<li><strike>${masterTodoList[i].text}</strike><a href='#' onclick='remove(${i})'> X </a><a href='#' onclick='toggleDone(${i})'> Mark Undone</a></li>\n`;
 
