@@ -9,6 +9,8 @@ let masterTodoList = [
   isDone : false}
 ];
 
+store();
+
 masterTodoList = JSON.parse(localStorage.getItem(TODOS_KEY));
 
 let addTodo = () => {
