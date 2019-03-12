@@ -2,7 +2,7 @@ const TODOS_KEY = "todos";
 
 let masterTodoList = [];
 
-localStorage.setItem("TODOS_KEY", JSON.stringify(masterTodoList));
+// localStorage.setItem("TODOS_KEY", JSON.stringify(masterTodoList));
 masterTodoList = JSON.parse(localStorage.getItem(TODOS_KEY));
 
 
@@ -33,6 +33,7 @@ let updateTodoList = () => {
   todoList.innerHTML = HTML;
 
   store();
+  console.log(masterTodoList);
 }
 
 //remove the item from list
@@ -51,7 +52,7 @@ let toggleDone = (i) => {
 
 //store to local storage
 let store = () => {
-  localStorage.setItem("TODOS_KEY", JSON.stringify(masterTodoList));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(masterTodoList));
 }
 
 //show undone button
